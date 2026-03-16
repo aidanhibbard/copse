@@ -8,8 +8,6 @@
 ![NPM Version](https://img.shields.io/npm/v/copse)
 ![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/copse)
 
-
-
 Git worktree manager — create worktrees and open editors for parallel development.
 
 Work on multiple features simultaneously, each in its own editor window. No more stashing, no more branch switching.
