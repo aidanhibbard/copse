@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "packageManager": "npm@10.9.2",
   "description": "Git worktree manager — create worktrees and open editors for parallel development",
+  "author": "aidanhibbard",
   "license": "MIT",
   "repository": {
     "type": "git",
