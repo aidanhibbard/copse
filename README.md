@@ -1,4 +1,4 @@
-# copse
+# Copse
 
 Git worktree manager — create worktrees and open editors for parallel development.
 
@@ -79,15 +79,6 @@ projects/
 ```
 
 Each worktree gets its own directory with a full working copy, and copse opens it in a separate editor instance so you can work on features in parallel.
-
-## Development
-
-```bash
-pnpm install
-pnpm build
-pnpm lint
-pnpm typecheck
-```
 
 ## License
 
