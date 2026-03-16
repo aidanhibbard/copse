@@ -5,13 +5,13 @@
 Install copse globally:
 
 ```bash
-npm install -g copse
+npm install -g @aidanhibbard/copse
 ```
 
 Or with pnpm:
 
 ```bash
-pnpm add -g copse
+pnpm add -g @aidanhibbard/copse
 ```
 
 ## Prerequisites

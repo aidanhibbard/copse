@@ -15,7 +15,7 @@ Work on multiple features simultaneously, each in its own editor window. No more
 ## Install
 
 ```bash
-npm install -g copse
+npm install -g @aidanhibbard/copse
 ```
 
 ## Usage
