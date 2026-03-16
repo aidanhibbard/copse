@@ -15,7 +15,9 @@ describe('branchExists', () => {
 
   it('returns false when git rev-parse throws', async () => {
     const { git } = await import('../../src/git/git')
-    vi.mocked(git).mockImplementation(() => { throw new Error('not found') })
+    vi.mocked(git).mockImplementation(() => {
+      throw new Error('not found')
+    })
     const { branchExists } = await import('../../src/git/branch-exists')
     expect(branchExists('nonexistent')).toBe(false)
   })

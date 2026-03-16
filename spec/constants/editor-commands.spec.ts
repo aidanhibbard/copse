@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { EDITOR_COMMANDS } from '../../src/constants/editor-commands'
 
-describe('EDITOR_COMMANDS', () => {
+describe('eDITOR_COMMANDS', () => {
   it('contains all expected editor keys', () => {
     expect(Object.keys(EDITOR_COMMANDS)).toEqual(
       expect.arrayContaining(['cursor', 'code', 'zed', 'webstorm', 'idea', 'vim', 'nvim']),

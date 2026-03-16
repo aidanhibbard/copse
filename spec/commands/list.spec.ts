@@ -1,5 +1,5 @@
-import { describe, expect, it, vi } from 'vitest'
 import { runCommand } from 'citty'
+import { describe, expect, it, vi } from 'vitest'
 import { WORKTREE_BARE, WORKTREE_DETACHED, WORKTREE_FEATURE, WORKTREE_MAIN } from '../mocks/worktrees'
 
 vi.mock('../../src/git', () => ({

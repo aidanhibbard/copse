@@ -1,5 +1,5 @@
-import { describe, expect, it, vi } from 'vitest'
 import { runCommand } from 'citty'
+import { describe, expect, it, vi } from 'vitest'
 
 vi.mock('../../src/git', () => ({
   branchExists: vi.fn().mockReturnValue(false),

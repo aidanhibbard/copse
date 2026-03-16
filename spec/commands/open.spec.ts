@@ -1,6 +1,6 @@
 import process from 'node:process'
-import { describe, expect, it, vi } from 'vitest'
 import { runCommand } from 'citty'
+import { describe, expect, it, vi } from 'vitest'
 import { WORKTREE_FEATURE, WORKTREE_MAIN } from '../mocks/worktrees'
 
 vi.mock('../../src/git', () => ({
