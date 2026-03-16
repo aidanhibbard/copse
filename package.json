@@ -29,7 +29,7 @@
     "dev": "vitest dev",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "release": "npm run spec && npm run build && npm publish && git push --follow-tags",
+    "release": "npm run spec && npm run build && npm publish --access public && git push --follow-tags",
     "spec": "npm run lint && npm run spec:types && npm run spec:coverage && npm run build",
     "spec:coverage": "vitest run --coverage",
     "spec:types": "tsc --noEmit --skipLibCheck",
