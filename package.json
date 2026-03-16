@@ -8,7 +8,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aidanhibbard/copse.git"
+    "url": "git+https://github.com/aidanhibbard/copse.git"
   },
   "keywords": [
     "git",
@@ -19,7 +19,7 @@
     "editor"
   ],
   "bin": {
-    "copse": "./dist/index.mjs"
+    "copse": "dist/index.mjs"
   },
   "files": [
     "dist"
