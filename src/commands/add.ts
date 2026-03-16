@@ -1,7 +1,8 @@
-import type { EditorName } from '../utils/editor'
+import type { EditorName } from '../types'
 import { defineCommand } from 'citty'
-import { openEditor } from '../utils/editor'
-import { addWorktree, branchExists, resolveWorktreePath } from '../utils/git'
+import { openEditor } from '../editor'
+import { addWorktree, branchExists, resolveWorktreePath } from '../git'
+import { logger } from '../utils/logger'
 
 export default defineCommand({
   meta: {
@@ -36,15 +37,15 @@ export default defineCommand({
     const isNew = !branchExists(branch)
     const wtPath = resolveWorktreePath(branch, args.path)
 
-    console.log(`Creating worktree for branch "${branch}" at ${wtPath}...`)
+    logger.info(`Creating worktree for branch "${branch}" at ${wtPath}...`)
 
     const created = addWorktree(branch, wtPath, { newBranch: isNew })
 
-    console.log(`Worktree created at ${created}`)
+    logger.success(`Worktree created at ${created}`)
 
     if (args.open) {
       const editor = args.editor as EditorName
-      console.log(`Opening in ${editor}...`)
+      logger.info(`Opening in ${editor}...`)
       openEditor(created, editor)
     }
   },

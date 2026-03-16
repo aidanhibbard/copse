@@ -37,12 +37,14 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
-    "citty": "^0.2.1"
+    "citty": "^0.2.1",
+    "consola": "^3.4.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^7.7.2",
     "@types/node": "^25.5.0",
     "eslint": "^9.22.0",
+    "jiti": "^2.6.1",
     "obuild": "^0.4.31",
     "typescript": "^5.8.2",
     "vitepress": "^1.6.3"

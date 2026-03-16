@@ -1,8 +1,9 @@
-import type { EditorName } from '../utils/editor'
+import type { EditorName } from '../types'
 import process from 'node:process'
 import { defineCommand } from 'citty'
-import { openEditor } from '../utils/editor'
-import { findWorktreeByBranch, listWorktrees } from '../utils/git'
+import { openEditor } from '../editor'
+import { findWorktreeByBranch, listWorktrees } from '../git'
+import { logger } from '../utils/logger'
 
 export default defineCommand({
   meta: {
@@ -31,15 +32,15 @@ export default defineCommand({
         .filter((b): b is string => b !== null)
         .join(', ')
 
-      console.error(`No worktree found for branch "${args.branch}".`)
+      logger.error(`No worktree found for branch "${args.branch}".`)
       if (available) {
-        console.error(`Available branches: ${available}`)
+        logger.error(`Available branches: ${available}`)
       }
       process.exit(1)
     }
 
     const editor = args.editor as EditorName
-    console.log(`Opening ${wt.path} in ${editor}...`)
+    logger.info(`Opening ${wt.path} in ${editor}...`)
     openEditor(wt.path, editor)
   },
 })

@@ -1,5 +1,6 @@
 import { defineCommand } from 'citty'
-import { removeWorktree } from '../utils/git'
+import { removeWorktree } from '../git'
+import { logger } from '../utils/logger'
 
 export default defineCommand({
   meta: {
@@ -20,8 +21,8 @@ export default defineCommand({
     },
   },
   run({ args }) {
-    console.log(`Removing worktree "${args.branch}"...`)
+    logger.info(`Removing worktree "${args.branch}"...`)
     removeWorktree(args.branch, { force: args.force })
-    console.log('Worktree removed.')
+    logger.success('Worktree removed.')
   },
 })

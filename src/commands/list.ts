@@ -1,5 +1,6 @@
 import { defineCommand } from 'citty'
-import { listWorktrees } from '../utils/git'
+import { listWorktrees } from '../git'
+import { logger } from '../utils/logger'
 
 export default defineCommand({
   meta: {
@@ -11,7 +12,7 @@ export default defineCommand({
     const worktrees = listWorktrees()
 
     if (worktrees.length === 0) {
-      console.log('No worktrees found.')
+      logger.info('No worktrees found.')
       return
     }
 
@@ -21,7 +22,7 @@ export default defineCommand({
       const branch = wt.branch ?? (wt.detached ? '(detached)' : '(bare)')
       const label = wt.main ? ' [main]' : ''
       const shortHead = wt.head.slice(0, 8)
-      console.log(`  ${wt.path.padEnd(maxPathLen)}  ${shortHead}  ${branch}${label}`)
+      logger.log(`  ${wt.path.padEnd(maxPathLen)}  ${shortHead}  ${branch}${label}`)
     }
   },
 })
