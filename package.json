@@ -1,0 +1,50 @@
+{
+  "name": "copse",
+  "type": "module",
+  "version": "0.0.1",
+  "packageManager": "npm@10.9.2",
+  "description": "Git worktree manager — create worktrees and open editors for parallel development",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aidanhibbard/copse.git"
+  },
+  "keywords": [
+    "git",
+    "worktree",
+    "cli",
+    "cursor",
+    "vscode",
+    "editor"
+  ],
+  "bin": {
+    "copse": "./dist/index.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "obuild ./src/index.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm build",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "dependencies": {
+    "citty": "^0.2.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^7.7.2",
+    "@types/node": "^25.5.0",
+    "eslint": "^9.22.0",
+    "obuild": "^0.4.31",
+    "typescript": "^5.8.2",
+    "vitepress": "^1.6.3"
+  }
+}

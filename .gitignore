@@ -1,0 +1,22 @@
+node_modules
+dist
+*.tsbuildinfo
+
+# VitePress
+docs/.vitepress/dist
+docs/.vitepress/cache
+
+# Editor
+.idea
+.vscode
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
