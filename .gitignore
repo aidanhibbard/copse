@@ -20,3 +20,5 @@ Thumbs.db
 # Env
 .env
 .env.*
+
+/coverage
