@@ -30,7 +30,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "release": "npm run spec && git push --follow-tags",
-    "spec": "npm run lint && npm run spec:types && npm run spec:coverage",
+    "spec": "npm run lint && npm run spec:types && npm run spec:coverage && npm run build",
     "spec:coverage": "vitest run --coverage",
     "spec:types": "tsc --noEmit --skipLibCheck",
     "prepublishOnly": "npm run build",
