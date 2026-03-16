@@ -1,5 +1,15 @@
 # Copse
 
+> /käps/ - a small group of trees.
+
+![GitHub Actions Workflow Status](https://github.com/AidanHibbard/copse/actions/workflows/ci.yml/badge.svg?branch=main)
+![NPM License](https://img.shields.io/npm/l/copse)
+![NPM Downloads](https://img.shields.io/npm/dw/copse)
+![NPM Version](https://img.shields.io/npm/v/copse)
+![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/copse)
+
+
+
 Git worktree manager — create worktrees and open editors for parallel development.
 
 Work on multiple features simultaneously, each in its own editor window. No more stashing, no more branch switching.
